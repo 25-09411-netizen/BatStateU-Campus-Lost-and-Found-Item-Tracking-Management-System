@@ -181,5 +181,3 @@ public abstract class Item {
 | **Panganiban, Kerk Daniel** | Lead Programmer |
 | **Panganiban, Jhanel** | System / Design Lead |
 | **Viceral, Jhayzel** | Documentation Lead |
-
-
