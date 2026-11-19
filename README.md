@@ -1,4 +1,4 @@
-# 🎒 BatStateU Campus Lost and Found Item Tracking and Management System
+,# 🎒 BatStateU Campus Lost and Found Item Tracking and Management System
 
 ![Java](https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![OOP](https://img.shields.io/badge/Paradigm-OOP-blue?style=for-the-badge)
@@ -182,5 +182,4 @@ public abstract class Item {
 | **Panganiban, Jhanel** | System / Design Lead |
 | **Viceral, Jhayzel** | Documentation Lead |
 
-### Project Contributors
-This project was successfully developed through the collaborative effort of all group members—contributing across system planning, architecture design, Java programming, testing, and documentation.
+
