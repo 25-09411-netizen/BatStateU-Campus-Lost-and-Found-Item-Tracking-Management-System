@@ -279,29 +279,43 @@ This screenshot shows the form used to report a lost or found item. Users need t
 
 ### 10.3 View All Records
 
+![Main Menu](Screenshot/view-all-records.jpeg)
+
 This screenshot displays all the lost and found item records stored in the system. Users can check the details of each reported item, including its item ID, name, location, and current status.
 
 ### 10.4 Search Item
+
+![Main Menu](Screenshot/search-item.jpeg)
 
 This screenshot shows the search feature. The user can enter an item ID, item name, or location to find a specific record. For example, searching for "Phone" displays related lost and found item records.
 
 ### 10.5 Possible Matches
 
+![Main Menu](Screenshot/possible-matches.jpeg)
+
 This screenshot displays possible matches between lost and found items. For example, if someone reports a lost phone and another person reports finding a phone, the system can show these records as possible matches for checking.
 
 ### 10.6 Claim Found Item
+
+![Main Menu](Screenshot/claim-found-item.jpeg)
 
 This screenshot shows the process of claiming a found item. The user is asked to enter the item ID of the found item they want to claim. After entering the item ID, the system changes the item's status to show that ownership is being verified.
 
 ### 10.7 Update Item Status
 
+![Main Menu](Screenshot/update-item-status.jpeg)
+
 This screenshot shows how to update an item's status. The user enters the item ID of the record they want to update. For example, entering `ITEM-002` allows the user to change its status to `Claimed`. The system then updates the record.
 
 ### 10.8 Remove Item Record
 
+![Main Menu](Screenshot/remove-item-record.jpeg)
+
 This screenshot shows how to remove an item record from the system. The user enters the item ID of the record they want to remove. This helps keep the system's records organized.
 
 ### 10.9 Exit System
+
+![Main Menu](Screenshot/exit-system.jpeg)
 
 This screenshot shows the exit option. When the user selects this option, the program ends and the application closes.
 
