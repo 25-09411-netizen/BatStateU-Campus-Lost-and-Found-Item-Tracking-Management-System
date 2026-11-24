@@ -1,435 +1,411 @@
-# 🎓 BatStateU Campus Lost and Found Item Tracking and Management System
+# BATSTATEU CAMPUS LOST AND FOUND ITEM TRACKING AND MANAGEMENT SYSTEM
 
-> **A Java-Based Lost and Found Management System for Batangas State University.**
 
-## 📋 Table of Contents
+A Java-Based Lost and Found Management System for Batangas State University.
 
-1. [Project Description](#-1-project-description)
-2. [Problem Being Addressed](#-2-problem-being-addressed)
-3. [Project Objectives](#-3-project-objectives)
-4. [Target Users](#-4-target-users)
-5. [Main Features](#-5-main-features)
-6. [Technologies Used](#-6-technologies-used)
-7. [Program Structure](#-7-program-structure)
-8. [OOP Concepts Demonstrated](#-8-oop-concepts-demonstrated)
-9. [Instructions for Running the Program](#-9-instructions-for-running-the-program)
-10. [Sample Screenshots](#-10-sample-screenshots)
-11. [Known Limitations](#-11-known-limitations)
-12. [Future Improvements](#-12-future-improvements)
-13. [Team Members and Roles](#-13-team-members-and-roles)
-14. [Project Contributors](#-14-project-contributors)
 
 ---
 
-## 📖 1. Project Description
 
-The **BatStateU Campus Lost and Found Item Tracking and Management System** is a Java-based console application designed to help students and university personnel report, search, and manage lost and found items within the campus.
+## 1. Project Description
 
-The system provides an organized way to record lost and found items, making it easier for users to check item information, track statuses, and identify possible matches.
 
----
+The BatStateU Campus Lost and Found Item Tracking and Management System is a Java-based application designed to help students and university personnel report, search, and manage lost and found items within the campus.
 
-## ⚠️ 2. Problem Being Addressed
 
-Losing personal belongings inside the campus is a common problem for students and university personnel. Without an organized record-keeping process, it is difficult to search for lost items, verify reported items, and know whether an item has already been claimed.
+The system provides an organized way to record lost and found items, making it easier to search for items and check their current status.
 
-This project aims to provide a simple, structured system that helps organize and manage lost and found item records efficiently.
 
----
+## 2. Problem Being Addressed
 
-## 🎯 3. Project Objectives
+
+Losing personal belongings inside the campus can be a problem for students and university personnel. Without an organized record, it can be difficult to search for lost items, check reported items, and know if an item has already been claimed.
+
+
+This project aims to provide a simple system that helps organize and manage lost and found item records.
+
+
+## 3. Project Objectives
+
 
 ### General Objective
+
+
 To develop a Java-based application that will help manage and track lost and found items within Batangas State University.
 
+
 ### Specific Objectives
-* To allow users to report lost and found items.
-* To store and organize item information systematically.
-* To allow users to view and search item records easily.
-* To help identify possible matches between lost and found items.
-* To manage and update the status of reported items.
-* To make the campus lost and found process more organized and convenient.
 
----
 
-## 👥 4. Target Users
+To allow users to report lost and found items.
+To store and organize item information.
+To allow users to view and search item records.
+To help identify possible matches between lost and found items.
+To manage the status of reported items.
+To make the lost and found process more organized and convenient.
+## 4. Target Users
+
 
 The system is intended for:
-* **BatStateU Students**
-* **Faculty Members**
-* **University Staff**
-* **Lost and Found Personnel**
 
----
 
-## ✨ 5. Main Features
+BatStateU Students
+Faculty Members
+University Staff
+Lost and Found Personnel
+## 5. Main Features
 
-* **Report Lost Item** – Allows users to enter and record information about an item they have lost.
-* **Report Found Item** – Allows users to enter and record information about an item they have found on campus.
-* **View All Records** – Displays all lost and found item records currently stored in the system.
-* **Search Item** – Allows users to search for specific records using an Item ID, item name, or location.
-* **Possible Matches** – Helps identify and display lost and found items that may match each other.
-* **Claim Found Item** – Allows users to enter the Item ID of a found item they want to claim, flagging it for ownership verification.
-* **Update Item Status** – Allows authorized users to change the status of an item record (e.g., *Claimed*).
-* **Remove Item Record** – Allows an item record to be removed from the system using its Item ID to keep records organized.
 
----
+**Report Lost Item** – Allows users to enter information about an item they have lost.
+**Report Found Item** – Allows users to enter information about an item they have found.
+**View All Records** – Displays all lost and found item records stored in the system.
+**Search Item** – Allows users to search using an item ID, item name, or location.
+**Possible Matches** – Displays lost and found items that may match each other.
+**Claim Found Item** – Allows users to enter the item ID of a found item they want to claim.
+**Update Item Status** – Allows users to change the status of an item record.
+**Remove Item Record** – Allows users to remove an item record using its item ID.
+## 6. Technologies Used
 
-## 🛠️ 6. Technologies Used
 
-* **Java** – Main programming language used to develop the system.
-* **Object-Oriented Programming (OOP)** – Used to structure and organize the program into modular classes and objects.
-* **ArrayList** – Used to dynamically store item records while the program is running.
-* **Scanner** – Used to receive and process user input from the console.
+**Java** – Main programming language used to develop the system.
+**Object-Oriented Programming (OOP)** – Used to organize the program into classes and objects.
+**ArrayList** – Used to store item records while the program is running.
+**Scanner** – Used to receive input from users.
+## 7. Program Structure
 
----
 
-## 🏗️ 7. Program Structure
+The system is divided into five main classes. Each class has its own role and responsibilities.
 
-The system is divided into five main Java classes, each with its own specific role and responsibilities:
 
-### 7.1 `Main.java` (Main Class)
-* **Role:** Starts the application.
-* **Responsibilities:**
-  * Displays the system title and starting welcome screen.
-  * Instantiates a `LostAndFoundSystem` object.
-  * Calls the method that starts the main system loop.
-* **Relationship:** Uses the `LostAndFoundSystem` class to run the application.
+### 7.1 Main Class (Main.java)
 
-### 7.2 `LostAndFoundSystem.java` (System Controller Class)
-* **Role:** Main controller of the system; handles all core operations.
-* **Responsibilities:**
-  * Displays and manages the main interactive menu.
-  * Adds new lost and found item records.
-  * Displays all stored item records.
-  * Searches for specific items and finds possible matches.
-  * Handles item claiming, status updates, and record removal.
-* **Relationship:** Uses an `ArrayList<Item>` to store item records and interacts with `LostItem` and `FoundItem` objects polymorphically through the `Item` parent class.
 
-### 7.3 `Item.java` (Abstract Parent Class)
-* **Role:** Abstract parent class for all lost and found items.
-* **Responsibilities:**
-  * Contains common attributes and information about an item.
-  * Uses `private` attributes to protect item data.
-  * Provides public getter and setter methods.
-  * Declares the abstract `displayInfo()` method.
-* **Relationship:** Serves as the superclass for `LostItem` and `FoundItem`.
+**Role:** Starts the application.
 
-### 7.4 `LostItem.java` (Child Class)
-* **Role:** Represents an item reported as lost.
-* **Responsibilities:**
-  * Inherits common item attributes and methods from `Item`.
-  * Provides its own implementation of `displayInfo()`.
-  * Identifies the record specifically as a missing/lost item.
-* **Relationship:** Inherits from the `Item` class (`extends Item`).
 
-### 7.5 `FoundItem.java` (Child Class)
-* **Role:** Represents an item reported as found.
-* **Responsibilities:**
-  * Inherits common item attributes and methods from `Item`.
-  * Provides its own implementation of `displayInfo()`.
-  * Identifies the record specifically as a found item on campus.
-* **Relationship:** Inherits from the `Item` class (`extends Item`).
+**Responsibilities:**
 
----
 
-## 🧩 8. OOP Concepts Demonstrated
+Displays the starting screen of the system.
+Creates a LostAndFoundSystem object.
+Calls the method that starts the application.
+**Relationship:**
 
-This project applies the four core principles of Object-Oriented Programming:
+
+Uses the LostAndFoundSystem class to run the program.
+### 7.2 LostAndFoundSystem Class (LostAndFoundSystem.java)
+
+
+**Role:** Main controller of the system. It handles the main operations.
+
+
+**Responsibilities:**
+
+
+Displays and manages the system menu.
+Adds lost and found item records.
+Displays all item records.
+Searches for specific items.
+Finds possible matches.
+Handles item claiming and status updates.
+Removes item records.
+**Relationship:**
+
+
+Uses an ArrayList to store item records.
+Works with LostItem and FoundItem objects through the Item parent class.
+### 7.3 Item Class (Item.java)
+
+
+**Role:** Abstract parent class for lost and found items.
+
+
+**Responsibilities:**
+
+
+Contains common information about an item.
+Uses private attributes to protect item information.
+Provides getter and setter methods.
+Declares the abstract displayInfo() method.
+**Relationship:**
+
+
+Serves as the parent class of LostItem and FoundItem.
+### 7.4 LostItem Class (LostItem.java)
+
+
+**Role:** Represents items reported as lost.
+
+
+**Responsibilities:**
+
+
+Uses the common information from the Item class.
+Provides its own version of the displayInfo() method.
+Represents records of missing items.
+**Relationship:**
+
+
+Inherits from the Item class.
+### 7.5 FoundItem Class (FoundItem.java)
+
+
+**Role:** Represents items reported as found.
+
+
+**Responsibilities:**
+
+
+Uses the common information from the Item class.
+Provides its own version of the displayInfo() method.
+Represents records of items found on campus.
+**Relationship:**
+
+
+Inherits from the Item class.
+## 8. OOP Concepts Demonstrated
+
+
+The project uses the four main principles of Object-Oriented Programming: Encapsulation, Inheritance, Polymorphism, and Abstraction.
+
 
 ### 8.1 Encapsulation
-* **Code Used:** `private` attributes and `public` getter/setter methods in `Item.java`.
-* **Example:**
-  ```java
-  private String itemName;
 
-  public String getItemName() {
-      return itemName;
-  }
 
-  public void setItemName(String itemName) {
-      this.itemName = itemName;
-  }
-  ```
-* **Explanation & Purpose:** The `private` keyword prevents other classes from directly modifying `itemName`. The getter and setter methods enforce controlled access, protecting item information and keeping data management organized.
+**Code Used:** Private attributes and public getter and setter methods in Item.java.
+
+
+**Example Code:**
+java
+private String itemName;
+
+
+public String getItemName() {
+    return itemName;
+}
+
+
+public void setItemName(String itemName) {
+    this.itemName = itemName;
+}
+
+
+**Explanation:**
+
+
+The private keyword prevents other classes from directly accessing the itemName variable. The getter and setter methods allow other classes to access or update its value in a controlled way.
+
+
+**Purpose in the System:**
+
+
+It helps protect item information and keeps access to the item's data organized.
+
 
 ### 8.2 Inheritance
-* **Code Used:** The `extends` keyword in `LostItem.java` and `FoundItem.java`.
-* **Example:**
-  ```java
-  public class LostItem extends Item {
-      // Lost item details
-  }
 
-  public class FoundItem extends Item {
-      // Found item details
-  }
-  ```
-* **Explanation & Purpose:** Allows `LostItem` and `FoundItem` to inherit common attributes and methods from `Item`, avoiding code duplication and keeping the codebase clean.
+
+**Code Used:** The extends keyword in LostItem.java and FoundItem.java.
+
+
+**Example Code:**
+java
+public class LostItem extends Item {
+    // Lost item details
+}
+
+
+public class FoundItem extends Item {
+    // Found item details
+}
+
+
+**Explanation:**
+
+
+The extends keyword allows LostItem and FoundItem to inherit common attributes and methods from the Item parent class.
+
+
+**Purpose in the System:**
+
+
+It avoids repeating the same item information in different classes and makes the code easier to organize.
+
 
 ### 8.3 Polymorphism
-* **Code Used:** Method overriding (`@Override`) of `displayInfo()` in `LostItem.java` and `FoundItem.java`.
-* **Example:**
-  ```java
-  @Override
-  public void displayInfo() {
-      // Displays specific lost or found item information
-  }
-  ```
-* **Explanation & Purpose:** Both child classes share the same method signature (`displayInfo()`) but execute their own tailored output formats depending on whether the object is a lost or found item.
+
+
+**Code Used:** Method overriding of displayInfo() in LostItem.java and FoundItem.java.
+
+
+**Example Code:**
+java
+@Override
+public void displayInfo() {
+    // Displays item information
+}
+
+
+**Explanation:**
+
+
+Both child classes use the same method name, but each class has its own way of displaying information.
+
+
+**Purpose in the System:**
+
+
+It allows the system to display different types of item information using the same method name.
+
 
 ### 8.4 Abstraction
-* **Code Used:** The `abstract` keyword in `Item.java`.
-* **Example:**
-  ```java
-  public abstract class Item {
-      public abstract void displayInfo();
-  }
-  ```
-* **Explanation & Purpose:** `Item` serves as an abstract blueprint that cannot be instantiated directly. Defining `displayInfo()` as abstract enforces that all subclasses provide their own concrete implementation.
 
----
 
-## 🚀 9. Instructions for Running the Program
+**Code Used:** The abstract keyword in Item.java.
 
-1. **Install Java:** Make sure the Java Development Kit (JDK) is installed on your computer.
-2. **Clone or Download:** Download the ZIP file or clone this repository from GitHub:
-   ```bash
-   git clone https://github.com/your-username/batstateu-lost-and-found.git
-   ```
-3. **Open in IDE:** Open the project folder using any Java IDE (e.g., NetBeans, IntelliJ IDEA, Eclipse, or VS Code).
-4. **Locate Main File:** Navigate to the `src` folder and locate `Main.java`.
-5. **Run Application:** Run `Main.java` to launch the console application and follow the on-screen menu prompts.
 
----
+**Example Code:**
+java
+public abstract class Item {
+    public abstract void displayInfo();
+}
 
-## 📸 10. Sample Screenshots
 
-> **📁 GitHub Image Setup Tip:** Create a `screenshots/` folder in your repository and upload your image files using the exact filenames listed below so they render automatically!
+**Explanation:**
+
+
+The Item class is an abstract parent class. It provides a common structure for lost and found items. The abstract displayInfo() method requires the child classes to provide their own implementation.
+
+
+**Purpose in the System:**
+
+
+It provides a common structure for both lost and found items while allowing each child class to display its own information.
+
+
+## 9. Instructions for Running the Program
+
+
+Make sure Java is installed on your computer.
+Download or clone the project repository from GitHub.
+Open the project folder using a Java IDE such as NetBeans, IntelliJ IDEA, or VS Code.
+Locate the Main.java file.
+Run the Main.java file to start the application.
+Follow the instructions displayed in the program.
+## 10. Sample Screenshots
+
+
+The following screenshots show the different features and functions of the system.
+
 
 ### 10.1 System Start / Main Menu
-Displays the starting screen of the system, including the project title and available menu options.
 
-![System Start / Main Menu](screenshots/1-main-menu.jpg)
 
-```text
-================================================
-BATSTATEU CAMPUS LOST AND FOUND SYSTEM
-================================================
-1. Report Lost Item
-2. Report Found Item
-3. View All Items
-4. Search Item
-5. Find Possible Matches
-6. Claim Found Item
-7. Update Item Status
-8. Remove Item Record
-9. Exit
-================================================
-Enter your choice:
-```
+![System Start / Main Menu](screenshots/main-menu.png)
+
+
+This screenshot shows the starting screen of the system. It displays the system title and the available menu options that users can choose from.
+
 
 ### 10.2 Report Item
-Shows the input prompts used to report a lost or found item. Users fill in the required details (such as item name, description, location, date, and reporter name) to log the record into the system.
 
-![Report Lost Item](screenshots/2-report-item.jpg)
 
-```text
-Enter your choice: 1
+![Report Item](screenshots/report-item.png)
 
-====== REPORT LOST ITEM ======
-Enter item name: Phone
-Enter item description: Black Cases
-Enter location: Canteen
-Enter date: Nov 22 2026
-Enter your name: Kristine
 
-Item successfully recorded!
-Your Item ID is: ITEM-001
-```
+This screenshot shows the form used to report a lost or found item. Users need to fill in the required information. A person who lost an item can report it as lost, while a person who found an item can report it as found.
+
 
 ### 10.3 View All Records
-Displays all lost and found item records currently stored in the system, showing each item's ID, name, description, location, date, reporter, and current status.
 
-![View All Records](screenshots/3-view-all-records.jpg)
 
-```text
-====== ALL ITEM RECORDS ======
+![View All Records](screenshots/view-records.png)
 
-Type: LOST ITEM
-ID: ITEM-001
-Name: Phone
-Description: Black Cases
-Location: Canteen
-Date: Nov 22 2026
-Reported by: Kristine
-Status: Lost
-----------------------------------------
-Type: FOUND ITEM
-ID: ITEM-002
-Name: Phone
-Description: Black Cases
-Location: Canteen
-Date: Nov 23 2026
-Reported by: Jhanel
-Status: Found
-----------------------------------------
-Type: LOST ITEM
-ID: ITEM-003
-Name: Pencil
-Description: Mongol
-Location: Room101
-Date: Nov 22 2026
-Reported by: Dani
-Status: Lost
-```
+
+This screenshot displays all the lost and found item records stored in the system. Users can check the details of each reported item, including its item ID, name, location, and current status.
+
 
 ### 10.4 Search Item
-Allows users to search by Item ID, item name, or location. For example, searching `"Phone"` filters and displays all matching lost and found phone records.
 
-![Search Item](screenshots/4-search-item.jpg)
 
-```text
-Enter your choice: 4
+![Search Item](screenshots/search-item.png)
 
-Enter item ID, name, or location to search: Phone
 
-Type: LOST ITEM
-ID: ITEM-001
-Name: Phone
-Description: Black Cases
-Location: Canteen
-Date: Nov 22 2026
-Reported by: Kristine
-Status: Lost
+This screenshot shows the search feature. The user can enter an item ID, item name, or location to find a specific record. For example, searching for "Phone" displays related lost and found item records.
 
-Type: FOUND ITEM
-ID: ITEM-002
-Name: Phone
-Description: Black Cases
-Location: Canteen
-Date: Nov 23 2026
-Reported by: Jhanel
-Status: Found
-
-Type: FOUND ITEM
-ID: ITEM-004
-Name: Phone
-Description: Pink Cases
-Location: Room104
-Date: Nov 22 2026
-Reported by: Jhayzel
-Status: Found
-```
 
 ### 10.5 Possible Matches
-Displays potential matches between lost and found reports based on item details (e.g., pairing a reported lost phone with a reported found phone for verification).
 
-![Possible Matches](screenshots/5-possible-matches.jpg)
 
-```text
-Enter your choice: 5
+![Possible Matches](screenshots/possible-matches.png)
 
-====== POSSIBLE ITEM MATCHES ======
 
-Possible match found!
-Lost Item:
-Type: LOST ITEM
-ID: ITEM-001
-Name: Phone
-Description: Black Cases
-Location: Canteen
-Date: Nov 22 2026
-Reported by: Kristine
-Status: Lost
+This screenshot displays possible matches between lost and found items. For example, if someone reports a lost phone and another person reports finding a phone, the system can show these records as possible matches for checking.
 
-Found Item:
-Type: FOUND ITEM
-ID: ITEM-002
-Name: Phone
-Description: Black Cases
-Location: Canteen
-Date: Nov 23 2026
-Reported by: Jhanel
-Status: Found
-```
 
 ### 10.6 Claim Found Item
-Prompts the user to enter the Item ID of a found item they wish to claim, automatically recording the claim request for ownership verification.
 
-![Claim Found Item](screenshots/6-claim-found-item.jpg)
 
-```text
-Enter your choice: 6
+![Claim Found Item](screenshots/claim-item.png)
 
-Enter the Found Item ID: Item-002
-Claim request recorded. Ownership must be verified by authorized personnel.
-```
+
+This screenshot shows the process of claiming a found item. The user is asked to enter the item ID of the found item they want to claim. After entering the item ID, the system changes the item's status to show that ownership is being verified.
+
 
 ### 10.7 Update Item Status
-Allows updating a record's status via its Item ID (e.g., changing `item-002` from *Claim Pending Verification* to **Claimed**) and saves the updated status in the list.
 
-![Update Item Status](screenshots/7-update-item-status.jpg)
 
-```text
-Enter your choice: 7
+![Update Item Status](screenshots/update-status.png)
 
-Enter Item ID: item-002
-Current Status: Claim Pending Verification
-1. Lost
-2. Found
-3. Claim Pending Verification
-4. Claimed
-Choose new status: 4
-Item status successfully updated!
-```
+
+This screenshot shows how to update an item's status. The user enters the item ID of the record they want to update. For example, entering ITEM-002 allows the user to change its status to Claimed. The system then updates the record.
+
 
 ### 10.8 Remove Item Record
-Prompts for an Item ID to delete resolved or unnecessary records (such as `item-002` after claiming) to keep the system organized.
 
-![Remove Item Record](screenshots/8-remove-item-record.jpg)
 
-```text
-Enter your choice: 8
+![Remove Item Record](screenshots/remove-item.png)
 
-Enter Item ID to remove: item-002
-Item record successfully removed!
-```
+
+This screenshot shows how to remove an item record from the system. The user enters the item ID of the record they want to remove. This helps keep the system's records organized.
+
 
 ### 10.9 Exit System
-Displays the closing message when the user selects option `9`, safely terminating the application.
 
----
 
-## 🚧 11. Known Limitations
+![Exit System](screenshots/exit-system.png)
 
-* **Console-Based Interface:** The application currently runs purely in the console and lacks a Graphical User Interface (GUI).
-* **Temporary In-Memory Storage:** Item records are stored in an `ArrayList`, meaning all data is cleared once the program closes.
-* **Basic Record Management:** Designed primarily for foundational tracking without advanced authentication or automated notifications.
 
----
+This screenshot shows the exit option. When the user selects this option, the program ends and the application closes.
 
-## 🔮 12. Future Improvements
 
-* **Graphical User Interface (GUI):** Develop a user-friendly desktop or web interface (e.g., JavaFX, Swing, or Spring Boot).
-* **Persistent Database Storage:** Integrate a relational database (such as MySQL or PostgreSQL) to permanently save records.
-* **User Authentication:** Add role-based login accounts for students, staff, and Lost & Found administrators.
-* **Enhanced Search & Matching:** Implement keyword scoring, date filters, and category-based matching algorithms.
-* **Image Uploads:** Allow users to attach photos of lost and found items for easier visual identification.
+## 11. Known Limitations
 
----
 
-## 👨‍💻 13. Team Members and Roles
+The system is console-based and does not have a graphical user interface.
+Item records are stored using an ArrayList.
+Records are temporary and are not permanently saved after the program closes.
+The system is designed for basic lost and found record management.
+## 12. Future Improvements
+
+
+Add a graphical user interface (GUI).
+Add permanent data storage using a database.
+Add user accounts and login features.
+Improve the search and matching functions.
+Add image uploads for lost and found items.
+## 13. Team Members and Roles
+
 
 | Team Member | Role |
-| :--- | :--- |
-| **Garing, Kristine Joy** | Project Leader |
-| **Panganiban, Kerk Daniel** | Lead Programmer |
-| **Panganiban, Jhanel** | System / Design Lead |
-| **Viceral, Jhayzel** | Documentation Lead |
+|---|---|
+| Garing Kristine Joy | Project Leader |
+| Panganiban Kerk Daniel | Lead Programmer |
+| Panganiban Jhanel | System / Design Lead |
+| Viceral Jhayzel | Documentation Lead |
 
----
 
-## 🤝 14. Project Contributors
+## 14. Project Contributors
 
-This project was developed through the collaborative effort and contributions of all group members. Each member actively participated in planning, system design, programming, testing, and documentation.
+
+This project was developed through the teamwork and contributions of all group members. Each member helped in planning, designing, programming, testing, and documenting the system.
