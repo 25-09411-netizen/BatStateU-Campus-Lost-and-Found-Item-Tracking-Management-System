@@ -267,7 +267,7 @@ The following screenshots show the different features and functions of the syste
 
 ### 10.1 System Start / Main Menu
 
-![Main Menu](screenshots/main-menu.jpg)
+![Main Menu](screenshots/main-menu.jpeg)
 
 This screenshot shows the starting screen of the system. It displays the system title and the available menu options that users can choose from.
 
