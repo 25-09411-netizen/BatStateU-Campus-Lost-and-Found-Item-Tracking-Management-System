@@ -267,11 +267,13 @@ The following screenshots show the different features and functions of the syste
 
 ### 10.1 System Start / Main Menu
 
-![Main Menu](screenshots/main-menu.jpeg)
+![Main Menu](Screenshot/main-menu.jpeg)
 
 This screenshot shows the starting screen of the system. It displays the system title and the available menu options that users can choose from.
 
 ### 10.2 Report Item
+
+![Main Menu](Screenshot/report-lost-item.jpeg)
 
 This screenshot shows the form used to report a lost or found item. Users need to fill in the required information. A person who lost an item can report it as lost, while a person who found an item can report it as found.
 
